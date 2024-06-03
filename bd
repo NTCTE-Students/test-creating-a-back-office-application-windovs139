@@ -1,0 +1,37 @@
+Users
+  user_id bigint
+  username varchar(255)
+  password varchar(255)
+  role varchar(255)
+
+Clients
+  client_id bigint
+  client_name varchar(255)
+  contact_info varchar(255)
+  last_contact_date date 
+
+Orders
+  order_id bigint
+  client_id varchar(255)
+  order_date varchar(255)
+  status varchar(255)
+
+Inventory
+  item_id bigint
+  item_name varchar(255)
+  quantity varchar(255)
+  threshhold_notification varchar(255)
+
+Transaction
+  transaction_id bigint
+  client_id foreign_key 
+  transaction_type varchar(255)
+  amount varchar(255)
+  date date
+
+EmailNotifications
+  notification  varchar(255)
+  recipient_email varchar(255)
+  subject varchar(255)
+  content varchar(255)
+  date_sent date
